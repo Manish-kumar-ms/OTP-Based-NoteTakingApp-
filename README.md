@@ -1,94 +1,145 @@
-# Full-Stack Note-Taking Application
+# 📝 Full-Stack Note-Taking Application
 
-This project is a full-stack note-taking application with authentication
-and note management features.
+A **full-stack MERN application** that allows users to:  
+- Sign up with **Email + OTP**.  
+- Securely log in and manage session with **JWT stored in cookies**.  
+- Create and delete personal notes.  
+- View user profile information after login.  
+- Enjoy a **responsive, mobile-friendly UI** that matches the given design.  
 
-## Features
+---
 
-1.  **User Authentication**
-    -   Signup with email and OTP flow.
-    -   JWT-based authentication stored in cookies.
-2.  **Error Handling**
-    -   Display meaningful error messages for validation failures, OTP
-        errors, and API issues.
-3.  **Home Page**
-    -   Shows logged-in user information (name, email).
-    -   Allows users to create and delete notes.
-4.  **Notes Management**
-    -   Notes are stored per user.
-    -   User can view all their notes after login.
-5.  **Responsive Design**
-    -   Mobile-friendly and follows the provided design.
-6.  **Security**
-    -   Secure cookie-based JWT authentication.
-    -   Protected routes on frontend and backend.
+## 🌐 Live Demo  
 
-## Tech Stack
+- **Frontend**: [https://note-frontend-demo.onrender.com](https://note-frontend-demo.onrender.com)  
+- **Backend**: [https://note-backend-demo.onrender.com](https://note-backend-demo.onrender.com)  
 
--   **Frontend:** React, Axios, React Router,Context API
--   **Backend:** Node.js, Express.js, MongoDB, JWT
--   **Authentication:** Email + OTP
--   **Styling:** Tailwind CSS
+---
 
-## APIs
+## 🚀 Features  
 
-### Auth Routes
+### 🔹 Authentication & User Management  
+- Signup with **Email + OTP**.  
+- Optional **Google OAuth login**.  
+- JWT authentication stored in **HTTP-only cookies**.  
+- Protected routes on both **frontend** and **backend**.  
 
--   `POST /api/auth/signup` → Signup with email
--   `POST /api/auth/send-otp` → Send OTP to email
--   `POST /api/auth/verify-otp` → Verify OTP and login
--   `GET /api/auth/currentUser` → Get logged-in user info
--   `POST /api/auth/logout` → Logout user
+### 🔹 Notes Management  
+- Create personal notes.  
+- Delete notes.  
+- Each note is tied to the logged-in user.  
 
-### Notes Routes
+### 🔹 Error Handling & Validation  
+- Real-time input validation.  
+- Clear error messages for **invalid OTP, wrong credentials, or server issues**.  
 
--   `POST /api/notes/createNotes` → Create a new note
--   `GET /api/notes/getAllNotes` → Fetch all notes for current user
--   `DELETE /api/notes/:id` → Delete note by ID
+### 🔹 Security  
+- Cookies are **HTTP-only** and sent only to the server.  
+- Protected APIs require valid JWT.  
 
-## Installation
+### 🔹 Responsive Design  
+- Works across **desktop, tablet, and mobile**.  
+- Matches the provided Figma/design assets.  
 
-### Backend
+---
 
-``` bash
+## 🛠️ Tech Stack  
+
+**Frontend:**  
+- ⚛️ React.js  
+- 📡 Axios  
+- 🌐 React Router  
+- 🎨 Tailwind CSS
+- Context API
+
+**Backend:**  
+- 🟢 Node.js + Express.js  
+- 🍃 MongoDB + Mongoose  
+- 🔑 JWT Authentication  
+- 📧 Nodemailer (for OTP)  
+
+---
+
+## 📦 Installation  
+
+### 1️⃣ Clone the repository  
+```bash
+git clone https://github.com/your-username/note-app.git
+cd note-app
+```
+
+### 2️⃣ Install dependencies  
+
+#### Backend  
+```bash
 cd backend
 npm install
+```
+
+#### Frontend  
+```bash
+cd ../frontend
+npm install
+```
+
+---
+
+## ⚙️ Environment Variables  
+
+Create a `.env` file inside the **backend** folder:  
+
+```env
+PORT=8000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_secret_key
+
+```
+
+---
+
+## ▶️ Running the App  
+
+### Start the backend  
+```bash
+cd backend
 npm start
 ```
 
-### Frontend
-
-``` bash
+### Start the frontend  
+```bash
 cd frontend
-npm install
 npm run dev
 ```
 
-## Environment Variables
+---
 
-Create a `.env` file in the backend with the following:
-    
-    MONGO_URI=your_mongodb_connection_string
-    JWT_SECRET=your_secret_key
-   
+## 🔗 API Endpoints  
 
-## How It Works
+### **Auth Routes**  
+- `POST /api/auth/signup` → Signup with email  
+- `POST /api/auth/send-otp` → Send OTP  
+- `POST /api/auth/verify-otp` → Verify OTP & login  
+- `GET /api/auth/currentUser` → Get logged-in user info  
+- `POST /api/auth/logout` → Logout  
 
-1.  User signs up with email → OTP sent → User verifies OTP → JWT token
-    stored in cookies.
-2.  User can log in with email/OTP or Google OAuth.
-3.  After login, user lands on home page with profile info and notes
-    section.
-4.  User can create/delete notes. Notes are tied to their account.
+### **Notes Routes**  
+- `POST /api/notes/createNotes` → Create note  
+- `GET /api/notes/getAllNotes` → Get all notes  
+- `DELETE /api/notes/:id` → Delete note  
 
-## Tasks Completed
-
-✔ Signup/Login with email and OTP\
-✔ Error handling and validation\
-✔ Home page with user info and notes\
-✔ Create and delete notes\
-✔ Protected routes (frontend + backend)\
-✔ JWT + cookies authentication\
-✔ Responsive mobile-friendly design
+---
 
 
+---
+
+## ✅ Tasks Completed  
+
+✔ Signup/Login with Email + OTP  
+✔ JWT + Cookies authentication  
+✔ Create and Delete Notes  
+✔ Error Handling and Validation  
+✔ Responsive Design  
+
+---
+
+📜 This project is licensed under the **MIT License**.  
