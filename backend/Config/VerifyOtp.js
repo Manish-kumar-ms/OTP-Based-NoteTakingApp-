@@ -45,8 +45,8 @@ export const verifyOtp = async (req, res) => {
     res.cookie("token", jwtToken, {
       httpOnly: true,
       maxAge,
-      sameSite: "Strict",
-      secure: false, // Set to true if using HTTPS
+      sameSite: "None",
+      secure: true,  // Set to true if using HTTPS 
     });
  
     res.json({
