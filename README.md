@@ -11,8 +11,8 @@ A **full-stack MERN application** that allows users to:
 
 ## 🌐 Live Demo  
 
-- **Frontend**: [https://note-frontend-demo.onrender.com](https://note-frontend-demo.onrender.com)  
-- **Backend**: [https://note-backend-demo.onrender.com](https://note-backend-demo.onrender.com)  
+- **Frontend**: [https://otp-based-notetakingapp-frontend.onrender.com](https://otp-based-notetakingapp-frontend.onrender.com)  
+- **Backend**: [https://otp-based-notetakingapp-backend.onrender.com](https://otp-based-notetakingapp-backend.onrender.com)  
 
 ---
 
